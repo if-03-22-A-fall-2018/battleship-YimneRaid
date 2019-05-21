@@ -51,7 +51,6 @@ CellContent get_shot(int row, int col){
 bool shoot(int row, int col){
   if (op[row][col]==Boat) {
     return true;
-
   }
     return false;
 }
