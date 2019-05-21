@@ -49,12 +49,22 @@ CellContent get_shot(int row, int col){
 }
 
 bool shoot(int row, int col){
-  if (op[row][col]==Boat) {
-    return true;
-  }
-    return false;
-}
+  if((row>=0&&row<FIELDSIZE)&&(col>=0&&col<FIELDSIZE))
+  {
+    if(op[row][col]==Water)
+    {
+      gu[row][col]=Water;
+      return true;
+    }
+    else if(op[row][col]==Boat)
+    {
+      gu[row][col]=Boat;
 
+      return true;
+    }
+  }
+  return false;
+}
 
 CellContent get_my_guess(int row, int col){
   if (((row>-1)&&(row<FIELDSIZE))&&((col>-1)&&(col<FIELDSIZE))) {
