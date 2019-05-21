@@ -55,6 +55,7 @@ bool shoot(int row, int col){
     return false;
 }
 
+
 CellContent get_my_guess(int row, int col){
   if (((row>-1)&&(row<FIELDSIZE))&&((col>-1)&&(col<FIELDSIZE))) {
     return gu[row][col];
